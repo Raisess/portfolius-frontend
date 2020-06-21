@@ -33,6 +33,7 @@ const RowItem = styled.h3`
   margin-left: 20px;
   &:hover {
     color: #fff;
+    transition: 0.5s;
   }
 `;
 
@@ -49,7 +50,7 @@ const CustomRow = styled(Row)`
 const TopBarComponent = () => (
   <TopBar>
     <StyledLink to="/">
-      <Title>Portifolius</Title>
+      <Title>Portfolius</Title>
     </StyledLink>
     <Row>
       <StyledLink to="/">
