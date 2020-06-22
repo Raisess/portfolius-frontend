@@ -7,6 +7,7 @@ import {
 
 // views
 import Home from './views/home.view';
+import Projects from './views/projects.view';
 import NoMatch from './views/404.view';
 
 const Router = () => (
@@ -14,6 +15,9 @@ const Router = () => (
     <Switch>
       <Route exact path="/">
         <Home />
+      </Route>
+      <Route path="/projects">
+        <Projects />
       </Route>
       <Route path="*">
         <NoMatch />

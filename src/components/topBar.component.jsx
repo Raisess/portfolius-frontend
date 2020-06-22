@@ -56,11 +56,11 @@ const TopBarComponent = () => (
       <StyledLink to="/">
         <RowItem>Home</RowItem>
       </StyledLink>
-      <StyledLink to="/projects">
-        <RowItem>Projetos</RowItem>
+      <StyledLink to="/explore">
+        <RowItem>Explorar</RowItem>
       </StyledLink>
-      <StyledLink to="/users">
-        <RowItem>Perfis</RowItem>
+      <StyledLink to="/projects">
+        <RowItem>Meus projetos</RowItem>
       </StyledLink>
     </Row>
     <CustomRow>
