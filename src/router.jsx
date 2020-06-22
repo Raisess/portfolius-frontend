@@ -31,10 +31,10 @@ const Router = () => {
           <Login />
         </Route>
         <Route path="/projects">
-          <Projects />
+          <Projects logged={l} />
         </Route>
         <Route path="*">
-          <NoMatch />
+          <NoMatch logged={l} />
         </Route>
       </Switch>
     </BrowserRouter>
