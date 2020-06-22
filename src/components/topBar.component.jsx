@@ -84,14 +84,18 @@ const TopBarComponent = ({ logged, userData }) => {
             if (!logged) {
               return (
                 <>
-                  <SmallButton
-                    text="Entrar"
-                    callback={() => window.location.href = '/login'}
-                  />
-                  <SmallButton
-                    text="Cadastro"
-                    callback={() => window.location.href = '/create'}
-                  />
+                  <Link to="/login">
+                    <SmallButton
+                      text="Entrar"
+                      callback={() => ''}
+                    />
+                  </Link>
+                  <Link to="/create">
+                    <SmallButton
+                      text="Cadastro"
+                      callback={() => ''}
+                    />
+                  </Link>
                 </>
               );
             }

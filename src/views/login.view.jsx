@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // components
 import Button from '../components/env/button.component';
@@ -45,11 +46,16 @@ const Span = styled.span`
   cursor: pointer;
 `;
 
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #222;
+`;
+
 const Login = () => {
   return (
     <div className="login">
-      <Title onClick={() => window.location.href = '/'}>
-        Portfolius
+      <Title>
+        <StyledLink to="/">Portfolius</StyledLink>
       </Title>
       <Container>
         <h1
@@ -98,7 +104,7 @@ const Login = () => {
         </SubContainer>
       </Container>
       <SubText>
-        Ainda não tem uma conta crie <Span onClick={() => window.location.href = '/create'}>aqui</Span>.
+        Ainda não tem uma conta crie <Span><Link to="/">aqui</Link></Span>.
       </SubText>
     </div>
   );
