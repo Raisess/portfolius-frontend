@@ -47,33 +47,45 @@ const CustomRow = styled(Row)`
   padding-top: 10px;
 `;
 
-const TopBarComponent = () => (
-  <TopBar>
-    <StyledLink to="/">
-      <Title>Portfolius</Title>
-    </StyledLink>
-    <Row>
+const TopBarComponent = ({ logged }) => {
+  return (
+    <TopBar>
       <StyledLink to="/">
-        <RowItem>Home</RowItem>
+        <Title>Portfolius</Title>
       </StyledLink>
-      <StyledLink to="/explore">
-        <RowItem>Explorar</RowItem>
-      </StyledLink>
-      <StyledLink to="/projects">
-        <RowItem>Meus projetos</RowItem>
-      </StyledLink>
-    </Row>
-    <CustomRow>
-      <SmallButton
-        text="Entrar"
-        callback={() => window.location.href = '/login'}
-      />
-      <SmallButton
-        text="Cadastro"
-        callback={() => window.location.href = '/create'}
-      />
-    </CustomRow>
-  </TopBar>
-);
+      <Row>
+        <StyledLink to="/">
+          <RowItem>Home</RowItem>
+        </StyledLink>
+        <StyledLink to="/explore">
+          <RowItem>Explorar</RowItem>
+        </StyledLink>
+        <StyledLink to="/projects">
+          <RowItem>Meus projetos</RowItem>
+        </StyledLink>
+      </Row>
+      <CustomRow>
+        {
+          (() => {
+            if (!logged) {
+              return (
+                <>
+                  <SmallButton
+                    text="Entrar"
+                    callback={() => window.location.href = '/login'}
+                  />
+                  <SmallButton
+                    text="Cadastro"
+                    callback={() => window.location.href = '/create'}
+                  />
+                </>
+              );
+            }
+          })()
+        }
+      </CustomRow>
+    </TopBar>
+  );
+}
 
 export default TopBarComponent;
