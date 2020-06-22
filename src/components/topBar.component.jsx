@@ -100,7 +100,7 @@ const TopBarComponent = ({ logged, userData }) => {
               <>
                 <Avatar src={userData.avatar} alt="avatar" />
                 <Username>{userData.username}</Username>
-                <SmallButton bg="#cf1919" bgHover="#de6a6a" text="Sair" callback={() => {
+                <SmallButton bg="#cf1919" bgHover="#e37171" text="Sair" callback={() => {
                   localStorage.setItem('logged', false);
 
                   window.location.href = '/login';

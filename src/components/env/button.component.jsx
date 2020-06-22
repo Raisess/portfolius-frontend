@@ -13,7 +13,7 @@ const Button = styled.button`
   cursor: pointer;
   font-weight: bold;
   &:hover {
-    transition: 0.5s;
+    transition: 0.2s;
     background-color: ${props => props.bgHover || "#7db582"};
   }
 `;
