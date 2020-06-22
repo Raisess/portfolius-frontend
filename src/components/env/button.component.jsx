@@ -18,9 +18,9 @@ const Button = styled.button`
   }
 `;
 
-const SmallButton = ({ callback, text, bg, bgHover }) => {
+const SmallButton = ({ callback, text, bg, bgHover, style }) => {
   return (
-    <Button onClick={() => callback()} bg={bg} bgHover={bgHover}>{text}</Button>
+    <Button onClick={() => callback()} bg={bg} bgHover={bgHover} style={style ? style : {}}>{text}</Button>
   );
 }
 

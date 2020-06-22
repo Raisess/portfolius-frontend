@@ -3,12 +3,13 @@ import styled from 'styled-components';
 
 const Input = styled.input`
   padding: 5px;
-  font-size: '19px';
+  height: 25px;
+  font-size: 18px;
   border: solid;
   border-radius: 5px;
-  border-color: #442954;
+  border-color: #333;
   border-width: 2px;
-  color: #442954;
+  color: #333;
 `;
 
 const InputComponent = ({ id, placeholder, type }) => (
