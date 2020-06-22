@@ -10,7 +10,7 @@ import { login } from '../services/user.service';
 
 const Container = styled.div`
   width: 300px;
-  height: 300px;
+  height: 290px;
   border-radius: 5px;
   background-color: #fff;
   box-shadow: 0 0 5px #333;
@@ -24,20 +24,33 @@ const SubContainer = styled.div`
   text-align: center;
 `;
 
+const Title = styled.h1`
+  width: 190px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10vh;
+  padding-bottom: 30px;
+  font-size: 40px;
+  cursor: pointer;
+`;
+
+const SubText = styled.p`
+  font-size: 15px;
+  text-align: center;
+  padding-top: 20px;
+`;
+
+const Span = styled.span`
+  color: orange;
+  cursor: pointer;
+`;
 
 const Login = () => {
   return (
     <div className="login">
-      <h1
-        style={{
-          textAlign: 'center',
-          marginTop: '10vh',
-          paddingBottom: '30px',
-          fontSize: '40px'
-        }}
-      >
+      <Title onClick={() => window.location.href = '/'}>
         Portfolius
-      </h1>
+      </Title>
       <Container>
         <h1
           style={{
@@ -57,6 +70,9 @@ const Login = () => {
           </div>
           <Button
             text="Fazer login"
+            style={{ marginLeft: '0' }}
+            bg="#442954"
+            bgHover="#473652"
             callback={() => {
               const username = document.getElementById('username').value;
               const password = document.getElementById('password').value
@@ -66,17 +82,24 @@ const Login = () => {
                 password: password
               })
                 .then(token => {
-                  localStorage.setItem('apiKey', token);
-                  localStorage.setItem('username', username);
-                  localStorage.setItem('password', password);
-                  localStorage.setItem('logged', true);
+                  if (token) {
+                    localStorage.setItem('apiKey', token);
+                    localStorage.setItem('username', username);
+                    localStorage.setItem('password', password);
+                    localStorage.setItem('logged', true);
 
-                  return window.location.href = '/';
+                    return window.location.href = '/';
+                  }
+
+                  return false;
                 });
             }}
           />
         </SubContainer>
       </Container>
+      <SubText>
+        Ainda não tem uma conta crie <Span onClick={() => window.location.href = '/create'}>aqui</Span>.
+      </SubText>
     </div>
   );
 }
