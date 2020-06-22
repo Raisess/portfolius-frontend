@@ -12,6 +12,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #eee;
   color: #222;
+  overflow-x: hidden;
 }
 
 code {

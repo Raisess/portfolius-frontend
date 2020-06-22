@@ -43,11 +43,23 @@ const StyledLink = styled(Link)`
 
 const CustomRow = styled(Row)`
   position: absolute;
-  right: 30px;
+  right: 35px;
   padding-top: 10px;
 `;
 
-const TopBarComponent = ({ logged }) => {
+const Avatar = styled.img`
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+`;
+
+const Username = styled.h3`
+  color: #fff;
+  padding-top: 6px;
+  padding-left: 10px;
+`;
+
+const TopBarComponent = ({ logged, userData }) => {
   return (
     <TopBar>
       <StyledLink to="/">
@@ -81,6 +93,13 @@ const TopBarComponent = ({ logged }) => {
                 </>
               );
             }
+
+            return (
+              <>
+                <Avatar src={userData.avatar} alt="avatar" />
+                <Username>{userData.username}</Username>
+              </>
+            );
           })()
         }
       </CustomRow>
