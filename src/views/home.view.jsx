@@ -4,10 +4,10 @@ import React from 'react';
 import TopBarComponent from '../components/topBar.component';
 import Footer from '../components/footer.component';
 
-const Home = ({ logged }) => {
+const Home = ({ logged, userData }) => {
   return (
     <div className="home">
-      <TopBarComponent logged={logged} />
+      <TopBarComponent logged={logged} userData={userData} />
       <h1>Home</h1>
       <Footer />
     </div>

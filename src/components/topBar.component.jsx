@@ -43,7 +43,7 @@ const StyledLink = styled(Link)`
 
 const CustomRow = styled(Row)`
   position: absolute;
-  right: 35px;
+  right: 30px;
   padding-top: 10px;
 `;
 
@@ -51,12 +51,14 @@ const Avatar = styled.img`
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 const Username = styled.h3`
   color: #fff;
   padding-top: 6px;
   padding-left: 10px;
+  cursor: pointer;
 `;
 
 const TopBarComponent = ({ logged, userData }) => {
@@ -98,6 +100,11 @@ const TopBarComponent = ({ logged, userData }) => {
               <>
                 <Avatar src={userData.avatar} alt="avatar" />
                 <Username>{userData.username}</Username>
+                <SmallButton bg="#cf1919" bgHover="#de6a6a" text="Sair" callback={() => {
+                  localStorage.setItem('logged', false);
+
+                  window.location.href = '/login';
+                }} />
               </>
             );
           })()

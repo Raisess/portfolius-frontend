@@ -19,9 +19,9 @@ const Text = styled.h1`
   font-size: 60px;
 `;
 
-const NoMatch = ({ logged }) => (
+const NoMatch = ({ logged, userData }) => (
   <div className="404">
-    <TopBar logged={logged} />
+    <TopBar logged={logged} userData={userData} />
     <Main>
       <Text>
         <span role="img" aria-label="Flushed Face">😳</span> Error 404 not found!

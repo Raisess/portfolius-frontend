@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  background-color: #2a9134;
+  background-color: ${props => props.bg || "#2a9134"};
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -14,13 +14,13 @@ const Button = styled.button`
   font-weight: bold;
   &:hover {
     transition: 0.5s;
-    background-color: #7db582;
+    background-color: ${props => props.bgHover || "#7db582"};
   }
 `;
 
-const SmallButton = ({ callback, text }) => {
+const SmallButton = ({ callback, text, bg, bgHover }) => {
   return (
-    <Button onClick={() => callback()}>{text}</Button>
+    <Button onClick={() => callback()} bg={bg} bgHover={bgHover}>{text}</Button>
   );
 }
 

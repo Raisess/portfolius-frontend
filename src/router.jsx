@@ -20,13 +20,13 @@ const Router = () => {
   const logged = localStorage.getItem('logged');
 
   useEffect(() => {
-    if (logged) {
+    if (logged !== 'false') {
       setL(true);
 
       get(localStorage.getItem('username'))
         .then(data => {
           setUserData(data);
-          console.log(data);
+          // console.log(data);
         });
     }
   }, [logged]);
