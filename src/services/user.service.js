@@ -18,3 +18,8 @@ export const login = ({ username, password }) => api
     console.error(err);
     return alert('Usuário ou senha incorreta!');
   });
+
+export const get = username => api
+  .get(`/user/get/${username}`)
+  .then(res => res.data.user)
+  .catch(err => console.error(err));
