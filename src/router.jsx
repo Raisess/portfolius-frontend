@@ -24,11 +24,11 @@ const Router = () => {
   return (
     <BrowserRouter>
       <Switch>
-        <Route exact path="/">
-          <Home logged={l} />
-        </Route>
         <Route path="/login">
           <Login />
+        </Route>
+        <Route exact path="/">
+          <Home logged={l} />
         </Route>
         <Route path="/projects">
           <Projects logged={l} />
