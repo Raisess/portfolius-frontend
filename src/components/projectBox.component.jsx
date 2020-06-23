@@ -22,7 +22,7 @@ const SubBox = styled.div`
   width: 100%;
   height: 30%;
   color: #eee;
-  margin-top: -3.7px;
+  margin-top: -3.5px;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
 `;

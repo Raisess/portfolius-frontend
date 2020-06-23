@@ -14,10 +14,16 @@ const Grid = styled.div`
   width: 80vw;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 20px;
+  padding-top: 40px;
   padding-bottom: 60px;
   grid-gap: 2em;
   grid-template-columns: 1fr 1fr 1fr 1fr;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  font-size: 45px;
+  padding-top: 35px;
 `;
 
 const Projects = ({ logged, userData }) => {
@@ -30,7 +36,7 @@ const Projects = ({ logged, userData }) => {
   return (
     <div className="projects">
       <TopBarComponent logged={logged} userData={userData} />
-      <h1>Projects</h1>
+      <Title>Meus Projetos</Title>
       <Grid>
         {
           (() => {
