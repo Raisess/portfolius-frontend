@@ -48,7 +48,7 @@ const Span = styled.span`
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-  color: #222;
+  color: #1c1945;
 `;
 
 const Login = () => {
@@ -77,8 +77,8 @@ const Login = () => {
           <Button
             text="Fazer login"
             style={{ marginLeft: '0' }}
-            bg="#442954"
-            bgHover="#473652"
+            bg="#1c1945"
+            bgHover="#37346e"
             callback={() => {
               const username = document.getElementById('username').value;
               const password = document.getElementById('password').value
