@@ -51,7 +51,7 @@ const Projects = ({ logged, userData }) => {
   return (
     <div className="projects">
       <TopBarComponent logged={logged} userData={userData} />
-      <Title>Meus Projetos</Title>
+      <Title>Seus Projetos</Title>
       <Grid display={display}>
         {
           (() => {

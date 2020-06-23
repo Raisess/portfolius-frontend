@@ -75,7 +75,7 @@ const TopBarComponent = ({ logged, userData }) => {
           <RowItem>Explorar</RowItem>
         </StyledLink>
         <StyledLink to="/projects">
-          <RowItem>Meus projetos</RowItem>
+          <RowItem>Seus projetos</RowItem>
         </StyledLink>
       </Row>
       <CustomRow>
