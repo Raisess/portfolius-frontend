@@ -14,6 +14,7 @@ const Container = styled.div`
   width: 70vw;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 50px;
 `;
 
 const Text = styled.h1`
