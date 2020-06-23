@@ -5,7 +5,7 @@ const Footer = styled.div`
   width: 100vw;
   height: 300px;
   color: #eee;
-  background-color: #442954;
+  background-color: #24205e;
 `;
 
 const FooterComponent = () => (

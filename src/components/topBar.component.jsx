@@ -8,8 +8,8 @@ const TopBar = styled.div`
   top: 0;
   width: 100vw;
   height: 60px;
-  background-color: #442954;
-  box-shadow: 0 0 5px #2b2747;
+  background-color: #24205e;
+  box-shadow: 0 0 5px #24205e;
   display: flex;
   flex-direction: row;
 `;
