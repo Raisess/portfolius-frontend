@@ -69,7 +69,7 @@ const Home = ({ logged, userData }) => {
       <NoFlexContainer>
         <CustomText style={{ paddingBottom: '20px' }}>Explore os projetos de nossos usuários.</CustomText>
         <StyledLink to="/explore">
-          <Button bg="#272640" bgHover="#37346e" width="200px" text="Explorar" />
+          <Button bg="#272640" bgHover="#37346e" width="200px" text="Explorar" callback={() => ''} />
         </StyledLink>
       </NoFlexContainer>
       <Footer />
