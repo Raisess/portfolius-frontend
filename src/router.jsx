@@ -40,6 +40,9 @@ const Router = () => {
         <Route exact path="/">
           <Home logged={l} userData={userData} />
         </Route>
+        <Route path="/home">
+          <Home logged={l} userData={userData} />
+        </Route>
         <Route path="/projects">
           <Projects logged={l} userData={userData} />
         </Route>

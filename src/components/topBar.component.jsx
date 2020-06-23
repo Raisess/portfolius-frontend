@@ -68,7 +68,7 @@ const TopBarComponent = ({ logged, userData }) => {
         <Title>Portfolius</Title>
       </StyledLink>
       <Row>
-        <StyledLink to="/">
+        <StyledLink to="/home">
           <RowItem>Home</RowItem>
         </StyledLink>
         <StyledLink to="/explore">
