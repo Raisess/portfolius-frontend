@@ -9,7 +9,7 @@ const TopBar = styled.div`
   width: 100vw;
   height: 60px;
   background-color: #442954;
-  /* box-shadow: 0 0 5px #2b2747; */
+  box-shadow: 0 0 5px #2b2747;
   display: flex;
   flex-direction: row;
 `;
@@ -104,7 +104,7 @@ const TopBarComponent = ({ logged, userData }) => {
               <>
                 <Avatar src={userData.avatar} alt="avatar" />
                 <Username>{userData.username}</Username>
-                <SmallButton bg="#cf1919" bgHover="#e37171" text="Sair" callback={() => {
+                <SmallButton bg="#cf1919" bgHover="#e37171" text="&times; Sair" callback={() => {
                   localStorage.setItem('logged', false);
 
                   window.location.href = '/login';
