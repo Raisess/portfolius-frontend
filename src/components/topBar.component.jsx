@@ -100,17 +100,19 @@ const TopBarComponent = ({ logged, userData }) => {
               );
             }
 
-            return (
-              <>
-                <Avatar src={userData.avatar} alt="avatar" />
-                <Username>{userData.username}</Username>
-                <SmallButton bg="#cf1919" bgHover="#e37171" text="&times; Sair" callback={() => {
-                  localStorage.setItem('logged', false);
+            if (userData !== {}) {
+              return (
+                <>
+                  <Avatar src={userData.avatar} alt="avatar" />
+                  <Username>{userData.username}</Username>
+                  <SmallButton bg="#cf1919" bgHover="#e37171" text="&times; Sair" callback={() => {
+                    localStorage.setItem('logged', false);
 
-                  window.location.href = '/login';
-                }} />
-              </>
-            );
+                    window.location.href = '/login';
+                  }} />
+                </>
+              );
+            }
           })()
         }
       </CustomRow>

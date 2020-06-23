@@ -7,6 +7,7 @@ const Button = styled.button`
   border: none;
   border-radius: 5px;
   height: 40px;
+  width: ${props => props.width || ''};
   font-size: 18px;
   padding: 10px;
   margin-left: 10px;
@@ -18,9 +19,9 @@ const Button = styled.button`
   }
 `;
 
-const SmallButton = ({ callback, text, bg, bgHover, style }) => {
+const SmallButton = ({ callback, text, bg, bgHover, style, width }) => {
   return (
-    <Button onClick={() => callback()} bg={bg} bgHover={bgHover} style={style ? style : {}}>{text}</Button>
+    <Button onClick={() => callback()} bg={bg} bgHover={bgHover} width={width} style={style ? style : {}}>{text}</Button>
   );
 }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 // assets
@@ -8,6 +9,7 @@ import blmImg from '../assets/blm.svg';
 // components
 import TopBarComponent from '../components/topBar.component';
 import Footer from '../components/footer.component';
+import Button from '../components/env/button.component';
 
 const Container = styled.div`
   display: flex;
@@ -41,6 +43,17 @@ const CustomText = styled(Text)`
   padding-top: 20px;
 `;
 
+const NoFlexContainer = styled(Container)`
+  padding-top: 0;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+`;
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+`;
+
 const Home = ({ logged, userData }) => {
   return (
     <div className="home">
@@ -53,6 +66,12 @@ const Home = ({ logged, userData }) => {
         <Text>Encontre programadores e web designers perfeitos para o seu projeto.</Text>
         <Img src={mainImg} alt="main-img" />
       </Container>
+      <NoFlexContainer>
+        <CustomText style={{ paddingBottom: '20px' }}>Explore os projetos de nossos usuários.</CustomText>
+        <StyledLink to="/explore">
+          <Button bg="#272640" bgHover="#37346e" width="200px" text="Explorar" />
+        </StyledLink>
+      </NoFlexContainer>
       <Footer />
     </div>
   );
